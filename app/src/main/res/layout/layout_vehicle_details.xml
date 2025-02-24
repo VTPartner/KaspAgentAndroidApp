@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       >
+       <!-- Vehicle Name -->
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Vehicle Name"
+           android:textSize="12sp"
+           android:textColor="@color/text_secondary"/>
+
+       <TextView
+           android:id="@+id/vehicleNameText"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="4dp"
+           android:layout_marginBottom="16dp"
+           android:textSize="16sp"
+           android:textColor="@color/text_primary"/>
+
+       <!-- Vehicle Type -->
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Vehicle Type"
+           android:textSize="12sp"
+
+           android:textColor="@color/text_secondary"/>
+
+       <TextView
+           android:id="@+id/vehicleTypeText"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="4dp"
+           android:layout_marginBottom="16dp"
+           android:textSize="16sp"
+           android:textColor="@color/text_primary"/>
+
+       <!-- Vehicle Type -->
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Vehicle Plate No"
+           android:textSize="12sp"
+
+           android:textColor="@color/text_secondary"/>
+
+       <TextView
+           android:id="@+id/vehiclePlateNoText"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="4dp"
+           android:layout_marginBottom="16dp"
+           android:textSize="16sp"
+           android:textColor="@color/text_primary"/>
+
+       <!-- Vehicle Fuel Type -->
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Vehicle Fuel Type"
+           android:textSize="12sp"
+
+           android:textColor="@color/text_secondary"/>
+
+       <TextView
+           android:id="@+id/vehicleFuelTypeText"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="4dp"
+           android:layout_marginBottom="16dp"
+           android:textSize="16sp"
+           android:textColor="@color/text_primary"/>
+       <!-- Vehicle Fuel Type -->
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="RC No"
+           android:textSize="12sp"
+
+           android:textColor="@color/text_secondary"/>
+
+       <TextView
+           android:id="@+id/rcNumberText"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="4dp"
+           android:layout_marginBottom="16dp"
+           android:textSize="16sp"
+           android:textColor="@color/text_primary"/>
+
+       <!-- Vehicle Insurance No -->
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Insurance No"
+           android:textSize="12sp"
+
+           android:textColor="@color/text_secondary"/>
+
+       <TextView
+           android:id="@+id/insuranceNumberText"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="4dp"
+           android:layout_marginBottom="16dp"
+           android:textSize="16sp"
+           android:textColor="@color/text_primary"/>
+   </LinearLayout>
+
+    <!-- Other vehicle details following the same pattern -->
+</merge>

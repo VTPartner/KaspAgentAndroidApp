@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <permission
+        android:name="${applicationId}.permission.SECURITY_SCAN"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="${applicationId}.permission.SECURITY_SCAN" />
+    <uses-permission
+        android:name="android.permission.POST_NOTIFICATIONS"
+        tools:node="remove" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+
+    <application
+        android:name=".VTPartnerApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.VTPartnerAgent"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".activities.goods_driver.notification_dialog.NotificationReceiverActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.goods_driver.notification_dialog.BookingDialogActivity"
+            android:excludeFromRecents="true"
+            android:exported="false" />
+        <activity
+            android:name=".activities.goods_driver.documents.main_documents.GoodsDriverVehicleOwnerDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.goods_driver.documents.main_documents.GoodsDriverVehicleDocumentsVerificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.goods_driver.documents.owner_documents.GoodsDriverVehicleOwnerSelfieUploadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.goods_driver.documents.vehicle_documents.GoodsDriverVehicleRCUploadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.goods_driver.documents.vehicle_documents.GoodsDriverPUCUploadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.goods_driver.documents.vehicle_documents.GoodsDriverVehiclePlateNoUploadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.goods_driver.documents.vehicle_documents.GoodsDriverVehicleNOCUploadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.goods_driver.documents.vehicle_documents.GoodsDriverVehicleInsuranceUploadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.goods_driver.documents.vehicle_documents.GoodsDriverVehicleImageUploadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.goods_driver.documents.other_documents.GoodsDriverOwnerSelfieUploadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.goods_driver.documents.other_documents.GoodsDriverPanCardUploadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.goods_driver.documents.other_documents.GoodsDriverAadharCardUploadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.goods_driver.documents.other_documents.GoodsDriverDrivingLicenseUploadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.goods_driver.documents.main_documents.GoodsDriverDocumentVerificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.goods_driver.GoodsDriverEditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.goods_driver.settings.GoodsDriverRechargeHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.goods_driver.settings.GoodsDriverRechargeHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.goods_driver.settings.GoodsDriverFaqActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".services.LocationUpdateService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".activities.goods_driver.settings.NewLiveRideActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name=".activities.goods_driver.GoodsDriverHomeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VTPartnerAgent.NoActionBar" />
+        <activity
+            android:name=".activities.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.App.Starting">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".services.FloatingHeadService"
+            android:directBootAware="true"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="dataSync"
+            android:process=":booking_service">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".services.FCMService"
+            android:directBootAware="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".services.BookingAcceptanceService"
+            android:directBootAware="true"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="dataSync"
+            android:permission="android.permission.SYSTEM_ALERT_WINDOW"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="SHOW_BOOKING" />
+                <action android:name="ACCEPT_BOOKING" />
+                <action android:name="REJECT_BOOKING" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_launcher_foreground" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/primary" />
+
+        <activity
+            android:name=".activities.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VTPartnerAgent.NoActionBar" />
+        <activity
+            android:name=".activities.OTPActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VTPartnerAgent.NoActionBar" /> <!-- Add inside application tag -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".activities.goods_driver.settings.GoodsDriverRidesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.goods_driver.settings.GoodsDriverEarningsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.goods_driver.settings.GoodsDriverRatingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DriverTypeSelectionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VTPartnerAgent.NoActionBar" />
+        <activity
+            android:name=".activities.LanguageSelectionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VTPartnerAgent.NoActionBar" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+    </application>
+
+</manifest>

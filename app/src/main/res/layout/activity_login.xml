@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@null"
+            android:src="@drawable/ic_back_arrow"
+            android:padding="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="18dp"
+            android:text="@string/enter_phone_number"
+            android:textColor="@color/primary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/backButton" />
+
+        <TextView
+            android:id="@+id/subtitleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/phone_verification_message"
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/titleText"
+            app:layout_constraintStart_toStartOf="@id/titleText"
+            app:layout_constraintTop_toBottomOf="@id/titleText" />
+
+        <LinearLayout
+            android:id="@+id/phoneInputContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp"
+            app:layout_constraintEnd_toEndOf="@id/titleText"
+            app:layout_constraintStart_toStartOf="@id/titleText"
+            app:layout_constraintTop_toBottomOf="@id/subtitleText">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/countryCodePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                app:ccp_showFlag="true"
+                app:ccp_showNameCode="true"
+                app:ccp_textSize="16sp"
+                app:ccp_contentColor="@color/black"
+                app:ccp_arrowColor="@color/black"
+                app:ccp_flagBorderColor="@color/light_gray"
+                app:ccpDialog_backgroundColor="@color/white"
+                app:ccpDialog_textColor="@color/black"
+                app:ccpDialog_searchEditTextTint="@color/primary"
+                app:ccp_showArrow="true"
+                app:ccp_showFullName="false" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phoneInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:hint="@string/phone_number"
+                app:boxBackgroundColor="@android:color/transparent"
+                app:boxStrokeColor="@color/text_secondary"
+                app:hintTextColor="@color/text_secondary"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/phoneInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:maxLength="15"
+                    android:textSize="16sp"
+                    android:focusable="true"
+                    android:textColor="@color/black"
+                    android:focusableInTouchMode="true"
+                    android:focusedByDefault="false" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/bottomDivider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/light_gray"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@id/continueButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/continueButton"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginBottom="36dp"
+            android:text="@string/continue_text"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+
+            app:cornerRadius="8dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/primary"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="OTPView">
+        <attr name="otpLength" format="integer" />
+        <attr name="boxWidth" format="dimension" />
+        <attr name="boxHeight" format="dimension" />
+        <attr name="boxSpacing" format="dimension" />
+        <attr name="boxRadius" format="dimension" />
+        <attr name="boxStrokeWidth" format="dimension" />
+    </declare-styleable>
+</resources> 

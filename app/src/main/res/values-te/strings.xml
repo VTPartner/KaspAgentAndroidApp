@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KAPS Partner</string>
+    <string name="select_language">భాషను ఎంచుకోండి</string>
+    <string name="continue_text">కొనసాగించు</string>
+    <string name="phone_number">Enter your phone number</string>
+    <!-- Add other strings -->
+</resources> 

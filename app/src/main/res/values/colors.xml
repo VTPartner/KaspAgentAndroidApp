@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="text_dark">#FF000000</color>
+    <color name="grey_300">#E0E0E0</color>
+    <color name="grey_500">#9E9E9E</color>
+    <color name="grey_800">#424242</color>
+    <color name="grey_900">#212121</color>
+    <color name="facebook_blue">#1877F2</color>
+    <color name="background_color_dark">#1C1C1C</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary">#FF0391E0</color>
+    <color name="text_secondary">#757575</color>
+    <color name="grey">#757575</color>
+    <color name="error_color">#B00020</color>
+    <color name="light_gray">#F5F5F5</color>
+    <color name="yellow">#FFC107</color>
+    <color name="divider">#E0E0E0</color>
+    <color name="primary_dark">#0277BD</color>
+    <color name="background_color">#F5F8FF</color>
+    <color name="text_primary">#212121</color>
+    <color name="shimmer_color">#DDDDDD</color>
+    <color name="gray_200">#EEEEEE</color>
+    <color name="gray_400">#BDBDBD</color>
+    <color name="gray_600">#757575</color>
+    <color name="green">#4CAF50</color>
+    <color name="red">#F44336</color>
+    <color name="blue">#2196F3</color>
+    <color name="orange">#FF9800</color>
+    <color name="primary_20">#330391E0</color>
+    <color name="border_color">#E0E0E0</color>
+    <color name="light_blue">#E3F2FD</color>
+    <color name="black_overlay">#80000000</color> <!-- Semi-transparent black -->
+    <color name="secondaryColor">#2196F3</color>
+    <color name="lightGrey">#E0E0E0</color>
+
+    <!-- Coins Colors -->
+    <color name="coins_gradient_start">#1a237e</color>
+    <color name="coins_gradient_end">#4a148c</color>
+    <color name="coins_card_bg">#F8F7FD</color>
+    <color name="coins_text_secondary">#666666</color>
+    <color name="coins_new_tag">#4CAF50</color>
+    <color name="coins_icon_color">#6200EA</color>
+
+    <!-- Home Colors -->
+    <color name="home_background_start">#001B4E</color>
+    <color name="home_background_end">#001038</color>
+    <color name="home_card_background">#FFFFFF</color>
+    <color name="home_text_secondary">#757575</color>
+    <color name="home_location_icon">#4CAF50</color>
+    <color name="home_rewards_start">#4527A0</color>
+    <color name="home_rewards_end">#311B92</color>
+
+    <color name="light_blue_bg">#F5F9FF</color>
+    <color name="stroke_color">#E0E0E0</color>
+
+    <color name="scrim">#66000000</color>
+
+    <!-- Add these colors -->
+    <color name="gray">#808080</color>
+    <color name="grey_600">#757575</color>
+
+    <!-- Add these colors if not already present -->
+    <color name="bottom_sheet_background">#FFFFFF</color>
+    <color name="pickup_marker">#4CAF50</color>
+    <color name="drop_marker">#F44336</color>
+    <color name="distance_icon">#757575</color>
+
+    <color name="gradient_start">#1A237E</color>
+    <color name="gradient_end">#0288D1</color>
+    <color name="ripple_color">#1F000000</color>
+
+    <color name="status_online">#4CAF50</color>
+    <color name="status_online_light">#804CAF50</color>
+    <color name="status_offline">#FF5252</color>
+    <color name="status_offline_light">#80FF5252</color>
+
+    <color name="route_color">#2196F3</color>
+    <color name="route_to_pickup_color">#4CAF50</color>
+    <color name="route_to_drop_color">#2196F3</color>
+
+</resources>

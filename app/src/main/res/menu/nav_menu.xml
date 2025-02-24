@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/nav_trips"
+            android:icon="@drawable/baseline_share_location_24"
+            android:title="Live Ride" />
+        <item
+            android:id="@+id/nav_earnings"
+            android:icon="@drawable/ic_earnings"
+            android:title="Earnings" />
+        <item
+            android:id="@+id/nav_my_ratings"
+            android:icon="@drawable/ic_star"
+            android:title="My Ratings" />
+        <item
+            android:id="@+id/nav_my_rides"
+            android:icon="@drawable/ic_trucks"
+            android:title="My Rides" />
+
+        <item
+            android:id="@+id/nav_recharge_home"
+            android:icon="@drawable/ic_wallet"
+            android:title="Recharge" />
+
+        <item
+            android:id="@+id/nav_recharge_history"
+            android:icon="@drawable/ic_history"
+            android:title="Recharge History" />
+
+
+    </group>
+
+    <item android:title="Other"
+        app:itemTextAppearance="@style/NavigationDrawerStyle">
+        <menu>
+<!--            <item-->
+<!--                android:id="@+id/nav_profile"-->
+<!--                android:icon="@drawable/ic_edit"-->
+<!--                android:title="Profile" />-->
+            <item
+                android:id="@+id/nav_account_delete"
+                android:icon="@drawable/ic_person"
+                android:title="Account Delete" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="Logout" />
+        </menu>
+    </item>
+</menu>

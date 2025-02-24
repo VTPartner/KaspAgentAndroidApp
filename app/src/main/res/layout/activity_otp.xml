@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_back_arrow"
+                android:padding="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="18dp"
+                android:text="@string/verify_phone"
+                android:textColor="@color/primary"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/backButton" />
+
+            <TextView
+                android:id="@+id/phoneNumberText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/text_secondary"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/titleText"
+                app:layout_constraintStart_toStartOf="@id/titleText"
+                app:layout_constraintTop_toBottomOf="@id/titleText" />
+
+            <LinearLayout
+                android:id="@+id/otpContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/phoneNumberText">
+
+                <EditText
+                    android:id="@+id/otpBox1"
+                    style="@style/OtpBoxStyle"
+                    android:enabled="true"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:cursorVisible="true"
+                    android:maxLength="1"
+                    android:inputType="number"
+                    android:importantForAutofill="no" />
+
+                <EditText
+                    android:id="@+id/otpBox2"
+                    style="@style/OtpBoxStyle"
+                    android:enabled="true"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:cursorVisible="true"
+                    android:maxLength="1"
+                    android:inputType="number"
+                    android:importantForAutofill="no" />
+
+                <EditText
+                    android:id="@+id/otpBox3"
+                    style="@style/OtpBoxStyle"
+                    android:enabled="true"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:cursorVisible="true"
+                    android:maxLength="1"
+                    android:inputType="number"
+                    android:importantForAutofill="no" />
+
+                <EditText
+                    android:id="@+id/otpBox4"
+                    style="@style/OtpBoxStyle"
+                    android:enabled="true"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:cursorVisible="true"
+                    android:maxLength="1"
+                    android:inputType="number"
+                    android:importantForAutofill="no" />
+
+                <EditText
+                    android:id="@+id/otpBox5"
+                    style="@style/OtpBoxStyle"
+                    android:enabled="true"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:cursorVisible="true"
+                    android:maxLength="1"
+                    android:inputType="number"
+                    android:importantForAutofill="no" />
+
+                <EditText
+                    android:id="@+id/otpBox6"
+                    style="@style/OtpBoxStyle"
+                    android:enabled="true"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:cursorVisible="true"
+                    android:maxLength="1"
+                    android:inputType="number"
+                    android:importantForAutofill="no" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/timerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/otpContainer" />
+
+            <TextView
+                android:id="@+id/resendButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                android:text="@string/resend_otp"
+                android:textColor="@color/primary"
+                android:textSize="16sp"
+                android:padding="8dp"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/timerText" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/verifyButton"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginBottom="36dp"
+                android:text="@string/verify"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                app:cornerRadius="8dp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/primary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/progressBarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/primary"/>
+
+    </FrameLayout>
+
+</FrameLayout>
